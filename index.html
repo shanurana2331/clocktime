@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLock Ticking</title>
+    <style>
+        .container{
+            background-color: darkgoldenrod;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;}
+
+        #space{
+            height: 50vh;
+        
+        }  
+        #text{
+         color: white;
+         text-align: center;
+        }
+        
+    </style>
+</head>
+<body style="background-color: black;">
+    <div class="container">
+        The Current time &nbsp; <span id="time"> </span>
+    </div>
+    <div id="space"></div>
+    <div id="text"> Above time is correct, Tumhara Bhagwan jaane</div>
+    
+    <script>
+        function displayTime(){
+           time = new Date();
+            console.log(time);
+            document.getElementById('time').innerHTML = time;}
+
+          setInterval(displayTime,100);
+      </script>  
+</body>
+</html>
